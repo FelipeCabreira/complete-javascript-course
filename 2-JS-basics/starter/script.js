@@ -1,5 +1,6 @@
-
-// console.log('Hello World');
+//          FIRST JAVASCRIPT NATIVE CODE EVER ( DONT JUDGE ME !! )
+// TO BE CURSE FREE ( HELLO WORLD )
+console.log('Hello World');
 
 
 // Ternario : 3 partes - Condição ? (if) : (else)
@@ -13,5 +14,41 @@ if (age >= 18) {
     var drink = 'beer';
 } else {
     var drink = 'juice';
-}   
+}
 
+// Switch Case ( not very used but still ...)
+var job = 'instructor';
+
+switch (job) {
+    case 'teacher':
+    case 'instructor':
+        console.log(firstName + ' teaches kids how to code.');
+        break;
+    case 'driver':
+        console.log(firstName + ' drives an uber in Lisbon.');
+        break;
+    case 'designer':
+        console.log(firstName + ' designs beautiful websites.');
+        break;
+    default:
+        break;
+}
+
+// Switch with last exercise
+
+switch (true) {
+    case age < 13:
+        console.log(firstName + ' is a boy.');
+
+        break;
+    case age >= 13 && age < 20:
+        console.log(firstName + ' is a teenager.')
+        break;
+    case age >= 20 && age < 30:
+        console.log(firstName + ' is a young man.')
+        break;
+
+    default:
+        console.log(firstName + ' is a man.')
+        break;
+}
