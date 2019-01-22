@@ -129,20 +129,20 @@ switch (true) {
 
 // Functions
 
-function calculateAge( birthYear ) {
+function calculateAge(birthYear) {
     return 2018 - birthYear;
 }
 
 var ageJohn = calculateAge(1990);
 var ageMike = calculateAge(1948);
 var ageJane = calculateAge(1969);
-console.log(ageJohn, ageMike, ageJane );
+console.log(ageJohn, ageMike, ageJane);
 
 
 function yearsUntilRetirement(year, firstName) {
     var age = calculateAge(year);
     var retirement = 65 - age;
-    if(retirement >= 0) {
+    if (retirement >= 0) {
         console.log(firstName + ' retires in ' + retirement + ' years');
     } else {
         console.log(firstName + ' is retired !');
@@ -152,3 +152,39 @@ function yearsUntilRetirement(year, firstName) {
 yearsUntilRetirement(1990, 'John');
 yearsUntilRetirement(1948, 'Mike');
 yearsUntilRetirement(1969, 'Jane');
+
+
+
+
+
+// Functions Statements and Expressions
+
+/*
+    Statements, function declaration não retornam valores direto
+    Expression retornam valores direto, salva algo em algum lugar
+*/
+
+// Function declaration
+// function whatDoYouDo(job, firstName) {}
+
+// Function Expression - Pega só o que é diferente , evita codigo repetido
+var whatDoYouDo = function (job, firstName) {
+    switch (job) {
+        case 'teacher':
+            // return ( acaba a função ) , não precisa do break
+            return firstName + ' teaches kids how to code';
+
+        case 'driver':
+            return firstName + ' drives a cab in Lisbon';
+
+        case 'designer':
+            return firstName + ' designs beatiful websites';
+
+        default:
+            return firstName + ' does something else';
+    }
+}
+
+console.log(whatDoYouDo('teacher', 'John'));
+console.log(whatDoYouDo('retired', 'Mike'));
+console.log(whatDoYouDo('designer', 'Jane'));
