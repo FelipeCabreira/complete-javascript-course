@@ -52,3 +52,103 @@ switch (true) {
         console.log(firstName + ' is a man.')
         break;
 }
+
+// Truthy and Falsy values
+
+// falsy values: undefined , null , 0 , '', NaN
+// truthy values: NOT falsy values
+
+
+var height;
+
+// heigth = '';
+heigth = 23;
+
+if (height || height === 0) {
+    console.log('Variable is defined');
+} else {
+    console.log('Variable is NOT defined');
+}
+
+
+// Equality operators
+
+// Type coercion ( 23 == '23') , transforma 23 ( NUMBER ) em 23 STRING e assume que são iguais ( JS )
+
+if (height == '23') {
+    console.log('The == operator does type coercion!');
+}
+
+// Strict equality ( 23 === '23' ) , tambem percebe a diferença de tipos e ve a diferença entre os numeros
+
+if (height === '23') {
+    console.log('The == operator does type coercion!');
+}
+
+// CODE CHALLENGE 2
+
+var averageJohn = (89 + 120 + 103) / 3;
+var averageMike = (116 + 94 + 123) / 3;
+var averageMary = (97 + 134 + 105) / 3;
+console.log(averageJohn, 'averageJohn');
+console.log(averageMike, 'averageMike');
+console.log(averageMary, 'averageMary');
+
+
+if (averageJohn > averageMike && averageJohn > averageMary) {
+    console.log('John wins');
+} else if (averageMike > averageJohn && averageMike > averageMary) {
+    console.log('Mike wins');
+} else if (averageMary > averageJohn && averageMary > averageMike) {
+    console.log('Mary wins');
+} else {
+    console.log('Draw');
+}
+
+//  OR SECOND SOLUTION ( WITH SWITCH )
+
+switch (true) {
+    case averageJohn > averageMike && averageJohn > averageMary:
+        console.log(averageJohn);
+
+        console.log('John wins');
+        break;
+    case averageMike > averageJohn && averageMike > averageMary:
+        console.log(averageMike);
+        console.log('Mike wins');
+        break;
+    case averageMary > averageJohn && averageMary > averageMike:
+        console.log(averageMary);
+        console.log('Mary wins');
+        break;
+
+    default:
+        console.log('It\'s a draw');
+        break;
+}
+
+// Functions
+
+function calculateAge( birthYear ) {
+    return 2018 - birthYear;
+}
+
+var ageJohn = calculateAge(1990);
+var ageMike = calculateAge(1948);
+var ageJane = calculateAge(1969);
+console.log(ageJohn, ageMike, ageJane );
+
+
+function yearsUntilRetirement(year, firstName) {
+    var age = calculateAge(year);
+    var retirement = 65 - age;
+    if(retirement >= 0) {
+        console.log(firstName + ' retires in ' + retirement + ' years');
+    } else {
+        console.log(firstName + ' is retired !');
+    }
+}
+
+yearsUntilRetirement(1990, 'John');
+yearsUntilRetirement(1948, 'Mike');
+yearsUntilRetirement(1969, 'Jane');
