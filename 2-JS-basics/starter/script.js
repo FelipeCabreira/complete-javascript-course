@@ -188,3 +188,47 @@ var whatDoYouDo = function (job, firstName) {
 console.log(whatDoYouDo('teacher', 'John'));
 console.log(whatDoYouDo('retired', 'Mike'));
 console.log(whatDoYouDo('designer', 'Jane'));
+
+
+
+// Arrays - Coleções de objetos , dados
+
+
+// Inicialize new array
+var names = ['John', 'Mark', 'Jane'];
+var years = new Array(1990, 1969, 1948);
+
+
+console.log(names[2]);
+console.log('TAMANHO DO ARRAY: ', names.length);
+
+// Mutate array data
+names[1] = 'Ben';
+names[names.length] = 'Mary';
+console.log(names);
+
+
+// Different data types
+// var john = ['John', 'Smith', 1990, 'teacher', false];
+var john = ['John', 'Smith', 1990, 'designer', false];
+
+// Methods Array
+// PUSH() - adiciona um elemento no final do array
+john.push('blue')
+// UNSHIFT - adiciona um elemento no começo do array
+john.unshift('Mr.');
+// POP() - remove um elemento do final do array
+john.pop();
+john.pop(); // remove mais um elemento do final
+// SHIFT() - remove um elemento do começo do array
+john.shift();
+console.log(john);
+// INDEXOF() - mostra a posição de um elemento no array ( se estiver ou nao )
+// console.log(john.indexOf(1990));
+console.log(john.indexOf(23)); // mostra -1 se nao estiver no array
+
+
+var isDesigner = john.indexOf('designer') === -1 ? 'John is NOT a designer' : 'John IS a designer';
+console.log(isDesigner);
+
+
